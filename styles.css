@@ -1,0 +1,274 @@
+/*PUT YOUR CUSTOM STYLE HERE*/
+
+/*!This style is important, do not override!*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* PARALLAX.CSS */
+/*CSS created by Christopher Jay De Claro*/
+/*github.com/cjdeclaro*/
+
+/*Key Art default settings*/
+
+.keyart,
+.keyart_layer {
+  height: 100vh;
+}
+
+.keyart {
+  position: relative;
+  z-index: 10;
+}
+
+.keyart_layer {
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  position: absolute;
+}
+
+.keyart_layer.parallax {
+  position: fixed;
+}
+
+/*ADD OR REMOVE LAYERS AS NEEDED*/
+
+#keyart-0 {
+  background-image: url(img/parallax0.png);
+}
+
+#keyart-1 {
+  background-image: url(img/parallax1.png);
+}
+
+#keyart-2 {
+  background-image: url(img/parallax2.png);
+}
+
+#keyart-3 {
+  background-image: url(img/parallax3.png);
+}
+
+#keyart-4 {
+  background-image: url(img/parallax4.png);
+}
+
+#keyart-5 {
+  background-image: url(img/parallax5.png);
+}
+
+#keyart-6 {
+  background-image: url(img/parallax6.png);
+}
+
+#keyart-7 {
+  background-image: url(img/parallax7.png);
+}
+
+#keyart-8 {
+  background-image: url(img/parallax8.png);
+}
+#keyart-9 {
+  background-image: url(img/parallax9.png);
+}
+#keyart-10 {
+  background-image: url(img/parallax10.png);
+}
+#keyart-11 {
+  background-image: url(img/parallax11.png);
+}
+#keyart-12 {
+  background-image: url(img/parallax12.png);
+}
+#keyart-13 {
+  background-image: url(img/parallax13.png);
+}
+#keyart-14 {
+  background-image: url(img/parallax14.png);
+}
+
+#keyart-scrim {
+  opacity: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #efcfa8;
+  font-weight: 300;
+  overflow-x: hidden;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.header-text {
+  font-family: "Playfair Display", cursive;
+  color: #efcfa8;
+  font-size: 26px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.container {
+  max-width: 1000px;
+  border-radius: 9px;
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  border-top: 0.7rem dotted;
+  opacity: 0.25;
+  width: 30%;
+}
+
+.section-main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 70px;
+
+  background-color: #687b39;
+  padding: 54px 16px;
+
+  z-index: 200;
+  width: 100%;
+  position: absolute;
+}
+
+.section-main-content div .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  border-radius: 6px;
+  text-align: center;
+  padding: 48px 32px 32px;
+}
+
+.author-img {
+  height: 300px;
+  background-image: url("https://img.welt.de/img/geschichte/mobile232834023/0991359787-ci16x9-w1200/Kombo-Saint-Exupery.jpg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.characters-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  float: left;
+  perspective: 500px;
+  background: #687b39;
+  border: none;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.back {
+  padding: 12px;
+  background-color: #f1cb9e;
+  color: #695a31;
+  transform: rotateY(180deg);
+  border: #ecd2b4 1px solid;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.character-img {
+  background-size: cover;
+  background-position: center;
+}
+#prince-img {
+  background-image: url("https://compote.slate.com/images/9fd5a80b-d293-4ab6-a211-5fd7a80f7858.jpg");
+}
+
+#aviator-img {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BOWFmNzJhMzItOTk3Ni00OTlmLWFjYjYtYzA5YTAyZjdhZjY1XkEyXkFqcGdeQXVyNTAyNDQ2NjI@._V1_.jpg");
+  background-position: 20%;
+}
+
+#rose-img {
+  background-image: url("https://cdn1.clickthecity.com/images/articles/600/28164.jpg");
+}
+
+#snake-img {
+  background-image: url("https://assets.mycast.io/actor_images/actor-the-snake-the-little-prince-617587_large.jpg?1670534173");
+}
+
+#fox-img {
+  background-image: url("https://i.guim.co.uk/img/media/060378fd433855b77f44c194e09082f7826e94c2/394_0_1453_872/master/1453.jpg?width=700&quality=85&auto=format&fit=max&s=83b7581a879b8d77e5ae8c8e321bbca9");
+  background-position: 35%;
+}
+
+#king-img {
+  background-image: url("https://www.cartoonbrew.com/wp-content/uploads/2016/05/netflix_littleprince_trailer-580x326.jpg");
+  background-position: 70%;
+}
+
+#conceited-img {
+  background-image: url("https://www.jmlalonde.com/wp-content/uploads/2018/04/the-little-prince-conceited-man.jpg");
+}
+
+#businessman-img {
+  background-image: url("https://hindicartoonblog.files.wordpress.com/2015/12/little6.jpg?w=663");
+}

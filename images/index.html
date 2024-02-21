@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Le Petit Prince</title>
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://drive.google.com/uc?export=view&id=1GF6GLcqvoJ0VASMtVsnIWwt0BAJv0h_Y"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .keyart,
+      .keyart_layer {
+        height: 100vh;
+      }
+
+      .keyart {
+        position: relative;
+        z-index: 10;
+      }
+
+      .keyart_layer {
+        background-position: bottom center;
+        background-size: cover;
+        background-repeat: repeat-x;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        position: absolute;
+      }
+
+      .keyart_layer.parallax {
+        position: fixed;
+      }
+
+      #keyart-0 {
+        background-image: url("images/parallax0.png");
+      }
+
+      #keyart-1 {
+        background-image: url("images/parallax1.png");
+      }
+
+      #keyart-2 {
+        background-image: url("images/parallax2.png");
+      }
+
+      #keyart-3 {
+        background-image: url("images/parallax3.png");
+      }
+
+      #keyart-4 {
+        background-image: url("images/parallax4.png");
+      }
+
+      #keyart-5 {
+        background-image: url("images/parallax5.png");
+      }
+
+      #keyart-6 {
+        background-image: url("images/parallax56.png");
+      }
+
+      #keyart-7 {
+        background-image: url("images/parallax7.png");
+      }
+
+      #keyart-8 {
+        background-image: url("images/parallax8.png");
+      }
+      #keyart-9 {
+        background-image: url("images/parallax9.png");
+      }
+      #keyart-10 {
+        background-image: url("images/parallax10.png");
+      }
+      #keyart-11 {
+        background-image: url("images/parallax11.png");
+      }
+      #keyart-12 {
+        background-image: url("images/parallax12.png");
+      }
+      #keyart-13 {
+        background-image: url("images/parallax13.png");
+      }
+      #keyart-14 {
+        background-image: url("images/parallax14.png");
+      }
+
+      #keyart-scrim {
+        opacity: 0;
+      }
+
+      /* MAIN CONTENT */
+
+      body {
+        color: #efcfa8;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        line-height: 1.8;
+        overflow-x: hidden;
+      }
+
+      h2 {
+        color: #efcfa8;
+        font-family: "Playfair Display", cursive;
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+
+      .container {
+        border-radius: 9px;
+        max-width: 1000px;
+      }
+
+      hr {
+        border-top: 0.7rem dotted;
+        color: inherit;
+        margin: 1rem 0;
+        opacity: 0.25;
+        width: 30%;
+      }
+
+      .section-main-content {
+        align-items: center;
+        background-color: #687b39;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        padding: 54px 16px;
+        position: absolute;
+        width: 100%;
+        z-index: 200;
+      }
+
+      .text-container {
+        align-items: center;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        justify-content: center;
+        padding: 48px 32px 32px;
+        text-align: center;
+      }
+
+      .characters-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .card {
+        background: #687b39;
+        border: none;
+        float: left;
+        height: 300px;
+        perspective: 500px;
+        width: 200px;
+      }
+
+      .content {
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        width: 100%;
+      }
+
+      .card:hover .content {
+        transform: rotateY(180deg);
+        transition: transform 0.5s;
+      }
+
+      .front,
+      .back {
+        backface-visibility: hidden;
+        border-radius: 5px;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+
+      .back h4 {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .back {
+        background-color: #f1cb9e;
+        border: #ecd2b4 1px solid;
+        color: #695a31;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        font-weight: 500;
+        justify-content: center;
+        line-height: 1.5;
+        padding: 12px;
+        transform: rotateY(180deg);
+      }
+
+      .character-img {
+        background-position: center;
+        background-size: cover;
+      }
+
+      #author-img {
+        background-image: url("https://img.welt.de/img/geschichte/mobile232834023/0991359787-ci16x9-w1200/Kombo-Saint-Exupery.jpg");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 9px;
+        height: 300px;
+        width: 100%;
+      }
+
+      #prince-img {
+        background-image: url("https://compote.slate.com/images/9fd5a80b-d293-4ab6-a211-5fd7a80f7858.jpg");
+      }
+
+      #aviator-img {
+        background-image: url("https://m.media-amazon.com/images/M/MV5BOWFmNzJhMzItOTk3Ni00OTlmLWFjYjYtYzA5YTAyZjdhZjY1XkEyXkFqcGdeQXVyNTAyNDQ2NjI@._V1_.jpg");
+        background-position: 20%;
+      }
+
+      #rose-img {
+        background-image: url("https://cdn1.clickthecity.com/images/articles/600/28164.jpg");
+      }
+
+      #snake-img {
+        background-image: url("https://assets.mycast.io/actor_images/actor-the-snake-the-little-prince-617587_large.jpg?1670534173");
+      }
+
+      #fox-img {
+        background-image: url("https://i.guim.co.uk/img/media/060378fd433855b77f44c194e09082f7826e94c2/394_0_1453_872/master/1453.jpg?width=700&quality=85&auto=format&fit=max&s=83b7581a879b8d77e5ae8c8e321bbca9");
+        background-position: 35%;
+      }
+
+      #king-img {
+        background-image: url("https://www.cartoonbrew.com/wp-content/uploads/2016/05/netflix_littleprince_trailer-580x326.jpg");
+        background-position: 70%;
+      }
+
+      #conceited-img {
+        background-image: url("https://www.jmlalonde.com/wp-content/uploads/2018/04/the-little-prince-conceited-man.jpg");
+      }
+
+      #businessman-img {
+        background-image: url("https://hindicartoonblog.files.wordpress.com/2015/12/little6.jpg?w=663");
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section-parallax">
+      <div class="keyart" id="parallax">
+        <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
+        <div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div>
+        <div class="keyart_layer parallax" id="keyart-2" data-speed="10"></div>
+        <div class="keyart_layer parallax" id="keyart-3" data-speed="20"></div>
+        <div
+          class="keyart_layer parallax parallax-mousemove"
+          id="keyart-8"
+          data-speed="15"
+          data-value="-1"
+        ></div>
+        <div
+          class="keyart_layer parallax parallax-mousemove"
+          id="keyart-9"
+          data-speed="30"
+          data-value="2"
+        ></div>
+        <div
+          class="keyart_layer parallax parallax-mousemove"
+          id="keyart-10"
+          data-speed="40"
+          data-value="-3"
+        ></div>
+        <div
+          class="keyart_layer parallax parallax-mousemove"
+          id="keyart-11"
+          data-speed="50"
+          data-value="4"
+        ></div>
+        <div
+          class="keyart_layer parallax parallax-mousemove"
+          id="keyart-12"
+          data-speed="60"
+          data-value="-4"
+        ></div>
+        <div
+          class="keyart_layer parallax parallax-mousemove"
+          id="keyart-13"
+          data-speed="70"
+          data-value="6"
+        ></div>
+
+        <div class="keyart_layer parallax" id="keyart-4" data-speed="40"></div>
+        <div class="keyart_layer parallax" id="keyart-5" data-speed="30"></div>
+        <div class="keyart_layer parallax" id="keyart-6" data-speed="55"></div>
+        <div class="keyart_layer" id="keyart-7"></div>
+
+        <!--Front image, in sync with scroll, no need to parallax-->
+        <!--Add or Remove layers as needed - check Parallax.css for refrence-->
+      </div>
+    </section>
+
+    <section class="section-main-content">
+      <div class="container introduction">
+        <div class="text-container">
+          <h2 class="header-text">Introduction</h2>
+          <p>
+            Prepare to embark on an extraordinary voyage beyond the boundaries
+            of our world. In the depths of the infinite universe, where stars
+            ignite the imagination, an ageless narrative of love, friendship,
+            and the quest for purpose awaits. Brace yourself as we unveil the
+            captivating realm of "Le Petit Prince (The Little Prince)" by
+            Antoine de Saint-Exupéry, a cherished masterpiece that will
+            transport you to a realm where dreams and reality intertwine.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="author container">
+        <div class="text-container">
+          <h2 class="header-text">Author</h2>
+          <div id="author-img"></div>
+          <p>
+            Antoine de Saint-Exupéry, the visionary behind "Le Petit Prince,"
+            was a renowned writer, aviator, and adventurer. His experiences as a
+            pilot influenced his literary works, which explored themes of
+            aviation, exploration, and the human spirit. Although he disappeared
+            during a mission in 1944, his legacy lives on through "Le Petit
+            Prince," which draws inspiration from his own experiences and
+            reflects on the complexities of human nature. Saint-Exupéry's life
+            and literary brilliance continue to inspire us to look beyond the
+            surface and embrace the wonders within and around us.
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="characters container">
+        <div class="text-container">
+          <h2 class="header-text">Characters</h2>
+          <div class="characters-container">
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="prince-img"></div>
+                <div class="back">
+                  <h4>Little Prince</h4>
+                  <p>
+                    A young boy with golden hair and a thoughtful nature. He
+                    leaves his tiny asteroid and embarks on a journey through
+                    the universe, encountering various characters and learning
+                    important life lessons along the way.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="aviator-img"></div>
+                <div class="back">
+                  <h4>Aviator</h4>
+                  <p>
+                    An elderly pilot who befriends the Little Prince and became
+                    the narrator of the story. Through their interactions, the
+                    Aviator rediscovers his passion for imagination and
+                    storytelling.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="rose-img"></div>
+                <div class="back">
+                  <h4>Rose</h4>
+                  <p>
+                    A beautiful but vain rose that the Little Prince cares for
+                    on his home asteroid. The Rose teaches him about love and
+                    the importance of connection.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="snake-img"></div>
+                <div class="back">
+                  <h4>Snake</h4>
+                  <p>
+                    A mysterious snake who appears as a guide to the Little
+                    Prince. The snake has the power to send the Little Prince
+                    back to his home asteroid if he desires.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="fox-img"></div>
+                <div class="back">
+                  <h4>Fox</h4>
+                  <p>
+                    A wise and insightful creature that the Little Prince
+                    encounters on Earth. The Fox teaches the Little Prince about
+                    taming, friendship, and the essence of what is truly
+                    important.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="king-img"></div>
+                <div class="back">
+                  <h4>King</h4>
+                  <p>
+                    A pompous and self-proclaimed ruler who believes he has
+                    authority over everything. The King represents the pitfalls
+                    of power and the need for humility.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="conceited-img"></div>
+                <div class="back">
+                  <h4>Conceited Man</h4>
+                  <p>
+                    A character who believes he is the most important person in
+                    the world. His self-centeredness serves as a cautionary tale
+                    about arrogance.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="front character-img" id="businessman-img"></div>
+                <div class="back">
+                  <h4>Businessman</h4>
+                  <p>
+                    A character solely focused on counting the stars and
+                    claiming ownership of them. He symbolizes the dehumanizing
+                    nature of greed and materialism.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="summary container">
+        <div class="text-container">
+          <h2 class="header-text">Summary</h2>
+          <p>
+            Once upon a time, there was a young prince who lived on a tiny
+            asteroid. He had a special rose, delicate and beautiful, that grew
+            on his little world. The prince loved his rose with all his heart
+            and cared for it with unwavering devotion. But sometimes, the rose
+            could be demanding and moody, causing the prince to wonder if their
+            bond was truly meaningful. One day, filled with a longing for
+            adventure and a curiosity about the universe, the little prince
+            decided to set out on a remarkable journey. Leaving his asteroid
+            behind, he embarked on a grand adventure through the vast expanse of
+            space. As he visited different planets, he encountered peculiar
+            characters that represented the complexities of adult life.
+          </p>
+
+          <p>
+            He met a king who ruled over an empty kingdom, seeking power without
+            subjects. There was a conceited man who craved constant admiration,
+            never realizing the worth of genuine connections. He encountered a
+            drunkard drowning his sorrows, unable to face his own pain. A
+            businessman obsessed with possessing everything he could lay his
+            eyes on, blinded by his desire for material wealth. He encountered a
+            diligent lamplighter, faithfully lighting up a tiny world that
+            nobody cared to see. And he met a geographer who knew of far-off
+            lands but had never set foot on them. Through these encounters, the
+            little prince gained profound insights into the nature of human
+            beings. He learned about their desires, their flaws, and their
+            priorities. However, it was during his encounter with a wise and
+            compassionate fox that he discovered one of the most important
+            lessons of all. The fox taught the little prince the value of
+            forming deep connections and taming the wild passions of the heart.
+            The little prince learned that what truly matters cannot be seen
+            with the eyes alone but is felt deeply within the heart. Love,
+            friendship, and genuine connections are the essence of life itself.
+          </p>
+
+          <p>
+            Eventually, the little prince arrived on Earth and befriended a
+            pilot who had crash-landed in the desert. The pilot became the
+            storyteller of this extraordinary journey. As the little prince
+            shared his whimsical tales and astute observations, he imparted
+            invaluable lessons about the transformative power of love and the
+            importance of seeing with one's heart. Throughout their time
+            together, the little prince expressed a deep longing to return to
+            his tiny asteroid and tend to his beloved rose. In a moment that
+            touched the depths of the heart, he encountered a venomous snake.
+            Driven by selflessness and a desire to protect others, the little
+            prince sacrificed himself to save another's life.
+          </p>
+
+          <p>
+            The story concludes with the pilot repairing his plane and vowing to
+            search for the little prince's asteroid. Moved by the prince's
+            profound impact on his life, the pilot reflects on the enduring
+            message of cherishing what is truly essential. The story reminds us
+            to embrace the innocence of childhood, nurture meaningful
+            connections, and rediscover the wonders that lie within our own
+            hearts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Uses JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+      function castParallax() {
+        var opThresh = 350;
+        var opFactor = 750;
+
+        window.addEventListener("scroll", function (event) {
+          var top = this.pageYOffset;
+
+          var layers = document.getElementsByClassName("parallax");
+          var layer, speed, yPos;
+          for (var i = 0; i < layers.length; i++) {
+            layer = layers[i];
+            speed = layer.getAttribute("data-speed");
+            var yPos = -((top * speed) / 100);
+            layer.setAttribute(
+              "style",
+              "transform: translate3d(0px, " + yPos + "px, 0px)"
+            );
+          }
+        });
+
+        document.addEventListener("mousemove", function (event) {
+          document
+            .querySelectorAll(".parallax-mousemove")
+            .forEach(function (move) {
+              var moving_value = move.getAttribute("data-value");
+              var x = (event.clientX * moving_value) / 250;
+              var y = (event.clientY * moving_value) / 250;
+
+              move.style.transform =
+                "translate(" + x + "px) translateY(" + y + "px)";
+            });
+        });
+      }
+
+      function dispelParallax() {
+        $("#nonparallax").css("display", "block");
+        $("#parallax").css("display", "none");
+      }
+
+      function castSmoothScroll() {
+        $.srSmoothscroll({
+          step: 80,
+          speed: 300,
+          ease: "linear",
+        });
+      }
+
+      function startSite() {
+        var platform = navigator.platform.toLowerCase();
+        var userAgent = navigator.userAgent.toLowerCase();
+
+        if (
+          platform.indexOf("ipad") != -1 ||
+          platform.indexOf("iphone") != -1
+        ) {
+          dispelParallax();
+        } else if (
+          platform.indexOf("win32") != -1 ||
+          platform.indexOf("linux") != -1
+        ) {
+          castParallax();
+          if ($.browser.webkit) {
+            castSmoothScroll();
+          }
+        } else {
+          castParallax();
+        }
+      }
+
+      document.body.onload = startSite();
+    </script>
+  </body>
+</html>
