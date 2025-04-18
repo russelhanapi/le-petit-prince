@@ -7,15 +7,15 @@ The page introduces *Le Petit Prince*, features a character section, and include
 
 ## Built With
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+[![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
+[![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#)
 
 
 ## Preview
 
 ![le-petit-prince](https://github.com/user-attachments/assets/80c54753-5402-439d-9762-352366a97900)
 
-[**View Live Site** 🌐](https://github.com/russelhanapi/le-petit-prince)  
+[**View Live Site** 🌐](https://russelhanapi.github.io/le-petit-prince)
 
 
 
