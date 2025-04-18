@@ -238,12 +238,13 @@ hr {
   background-size: cover;
   background-position: center;
 }
+
 #prince-img {
   background-image: url("https://compote.slate.com/images/9fd5a80b-d293-4ab6-a211-5fd7a80f7858.jpg");
 }
 
 #aviator-img {
-  background-image: url("https://m.media-amazon.com/images/M/MV5BOWFmNzJhMzItOTk3Ni00OTlmLWFjYjYtYzA5YTAyZjdhZjY1XkEyXkFqcGdeQXVyNTAyNDQ2NjI@._V1_.jpg");
+  background-image: url("https://i.pinimg.com/736x/f4/38/96/f43896181a3a4f56013df24f207f2da4.jpg");
   background-position: 20%;
 }
 
