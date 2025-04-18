@@ -2,7 +2,7 @@
 
 A visually engaging, desktop-only website that showcases a **parallax scrolling effect** using **HTML** and **CSS**. This school activity project is inspired by the story of *Le Petit Prince* and includes an introduction, character highlights, and a brief story summary.
 
----
+
 
 ## 📖 Description
 
@@ -10,7 +10,7 @@ This project was created as a school activity to demonstrate the implementation 
 
 > **Note:** This website is optimized for desktop viewing only.
 
----
+
 
 ## ✨ Features
 
@@ -19,7 +19,7 @@ This project was created as a school activity to demonstrate the implementation 
 - 📘 Story summary
 - 🎢 Parallax scrolling animations
 
----
+
 
 ## 🛠️ Built With
 
