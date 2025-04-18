@@ -1,28 +1,21 @@
-# 🌟 Le Petit Prince — Parallax Website
+# 🌹 Le Petit Prince — Parallax Website
 
-A visually engaging, desktop-only website that showcases a **parallax scrolling effect** using **HTML** and **CSS**. This school activity project is inspired by the story of *Le Petit Prince* and includes an introduction, character highlights, and a brief story summary.
+A simple desktop-only website that uses **HTML** and **CSS** to implement parallax scrolling.  
+This was made as a school activity to demonstrate how parallax effects work in web design.
 
+The page introduces *Le Petit Prince*, features a character section, and includes a short summary of the story.
 
+## Built With
 
-## 📖 Description
-
-This project was created as a school activity to demonstrate the implementation of **parallax scrolling** in web design. The content and visuals are themed around *Le Petit Prince*, delivering a smooth and interactive storytelling experience.
-
-> **Note:** This website is optimized for desktop viewing only.
-
-
-
-## ✨ Features
-
-- 📜 Introduction to *Le Petit Prince*
-- 👑 Character section with visuals
-- 📘 Story summary
-- 🎢 Parallax scrolling animations
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
 
+## Preview
 
-## 🛠️ Built With
+![le-petit-prince](https://github.com/user-attachments/assets/80c54753-5402-439d-9762-352366a97900)
 
-- HTML5  
-- CSS3 (with parallax effect implementation)
+[**View Live Site** 🌐](https://github.com/russelhanapi/le-petit-prince)  
+
+
 
